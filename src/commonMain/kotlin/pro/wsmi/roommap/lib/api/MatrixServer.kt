@@ -1,9 +1,11 @@
 package pro.wsmi.roommap.lib.api
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import pro.wsmi.kwsmilib.net.URL
 
+@ExperimentalSerializationApi
 @Serializable
 data class MatrixServer (
     val id: String,

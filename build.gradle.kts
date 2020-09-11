@@ -1,10 +1,11 @@
 plugins {
     kotlin("multiplatform") version "1.4.10"
     kotlin("plugin.serialization") version "1.4.10"
+    `maven-publish`
 }
 
 group = "pro.wsmi"
-version = "0.1"
+version = "0.1.0"
 
 val SERIALIZATION_VERSION = "1.0.0-RC"
 val KWSMILIB_VERSION = "0.6.0"
