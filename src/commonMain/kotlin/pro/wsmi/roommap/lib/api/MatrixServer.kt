@@ -8,7 +8,6 @@ import pro.wsmi.kwsmilib.net.URL
 @ExperimentalSerializationApi
 @Serializable
 data class MatrixServer (
-    val id: String,
     val name: String,
     @SerialName("api_url")
     val apiURL: URL,
