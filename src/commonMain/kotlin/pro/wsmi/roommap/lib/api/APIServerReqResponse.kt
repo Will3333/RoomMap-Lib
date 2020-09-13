@@ -6,7 +6,9 @@ import kotlinx.serialization.Serializable
 
 @ExperimentalSerializationApi
 @Serializable
-data class APIRoomListReqResponse (
-    @SerialName("rooms")
-    val rooms: Map<String, List<MatrixRoom>>
+data class APIServerReqResponse (
+        @SerialName("server_id")
+        val serverId: String,
+        @SerialName("server")
+        val server: MatrixServer
 ) : APIResponse
