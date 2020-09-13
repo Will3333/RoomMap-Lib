@@ -6,9 +6,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class APIRoomListReq (
         @SerialName("start")
-        val start: Long = 0,
+        val start: Int = 0,
         @SerialName("end")
-        val end: Long? = null,
+        val end: Int? = null,
         @SerialName("sorting_element")
         val sortingElement: MatrixRoomListSortingElement = MatrixRoomListSortingElement.NUM_JOINED_MEMBERS,
         @SerialName("descending_sort")
