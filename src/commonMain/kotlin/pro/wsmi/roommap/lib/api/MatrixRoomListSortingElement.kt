@@ -5,5 +5,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class MatrixRoomListSortingElement {
     NUM_JOINED_MEMBERS,
-    SERVER_NAME
+    SERVER_NAME,
+    ROOM_NAME
 }
