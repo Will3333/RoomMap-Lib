@@ -16,7 +16,7 @@ data class APIRoomListReq (
         @SerialName("sorting_element")
         val sortingElement: MatrixRoomListSortingElement = MatrixRoomListSortingElement.NUM_JOINED_MEMBERS,
         @SerialName("descending_sort")
-        val descendingSort: Boolean = false,
+        val descendingSort: Boolean = true,
         @SerialName("start")
         val start: Int = 0,
         @SerialName("end")

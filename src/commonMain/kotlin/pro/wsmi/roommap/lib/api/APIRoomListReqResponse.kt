@@ -8,5 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class APIRoomListReqResponse (
     @SerialName("rooms")
-    val rooms: List<MatrixRoom>
+    val rooms: List<MatrixRoom>,
+    @SerialName("rooms_total_num")
+    val roomsTotalNum: Int
 ) : APIResponse
