@@ -11,8 +11,8 @@ data class MatrixRoom (
     val serverId: String,
     @SerialName("aliases")
     val aliases: List<String>? = null,
-    @SerialName("canonical_aliases")
-    val canonicalAliases: String? = null,
+    @SerialName("canonical_alias")
+    val canonicalAlias: String? = null,
     val name: String? = null,
     @SerialName("num_joined_members")
     val numJoinedMembers: Int,
