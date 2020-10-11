@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 data class APIServerReq (
         @SerialName("server_id")
         val serverId: String
-) : APIRequest
+) : APIRequestWithParameters
 {
         companion object {
                 const val REQ_PATH = APIRequest.API_PATH + "/server"

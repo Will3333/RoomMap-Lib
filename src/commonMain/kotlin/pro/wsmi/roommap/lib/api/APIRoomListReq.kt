@@ -22,7 +22,7 @@ data class APIRoomListReq (
         val start: Int = 0,
         @SerialName("end")
         val end: Int? = null
-) : APIRequest
+) : APIRequestWithParameters
 {
     companion object {
         const val REQ_PATH = APIRequest.API_PATH + "/rooms"
