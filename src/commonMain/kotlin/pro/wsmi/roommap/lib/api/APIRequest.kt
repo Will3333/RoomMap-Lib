@@ -6,5 +6,6 @@ interface APIRequest : APIMessage
         const val API_PATH = "/api"
     }
 
-    abstract fun getReqPath() : String
+    val reqPath: String
+    val httpMethod: String
 }

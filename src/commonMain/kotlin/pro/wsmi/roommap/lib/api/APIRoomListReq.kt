@@ -4,6 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
+@Suppress("unused")
 data class APIRoomListReq (
         @SerialName("filtering_guest_can_join")
         val filteringGuestCanJoin: MatrixRoomGuestCanJoinFilter = MatrixRoomGuestCanJoinFilter.NO_FILTER,
@@ -25,7 +26,11 @@ data class APIRoomListReq (
 {
     companion object {
         const val REQ_PATH = APIRequest.API_PATH + "/rooms"
+        const val HTTP_METHOD = "POST"
     }
 
-    override fun getReqPath(): String = REQ_PATH
+    override val reqPath: String
+        get() = REQ_PATH
+    override val httpMethod: String
+        get() = HTTP_METHOD
 }

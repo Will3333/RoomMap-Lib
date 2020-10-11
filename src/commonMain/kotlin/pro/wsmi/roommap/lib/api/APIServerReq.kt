@@ -4,6 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
+@Suppress("unused")
 data class APIServerReq (
         @SerialName("server_id")
         val serverId: String
@@ -11,7 +12,11 @@ data class APIServerReq (
 {
         companion object {
                 const val REQ_PATH = APIRequest.API_PATH + "/server"
+                const val HTTP_METHOD = "POST"
         }
 
-        override fun getReqPath(): String = REQ_PATH
+        override val reqPath: String
+                get() = REQ_PATH
+        override val httpMethod: String
+                get() = HTTP_METHOD
 }
