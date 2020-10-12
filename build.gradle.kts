@@ -7,7 +7,7 @@ plugins {
 group = "pro.wsmi"
 version = "0.1.0"
 
-val SERIALIZATION_VERSION = "1.0.0-RC"
+val SERIALIZATION_VERSION = "1.0.0"
 val KWSMILIB_VERSION = "0.8.3"
 
 repositories {
@@ -25,7 +25,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$SERIALIZATION_VERSION")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$SERIALIZATION_VERSION")
                 implementation("pro.wsmi:kwsmilib:$KWSMILIB_VERSION")
             }
         }
