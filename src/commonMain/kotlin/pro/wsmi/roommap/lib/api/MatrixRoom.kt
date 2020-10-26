@@ -20,7 +20,7 @@ data class MatrixRoom (
     @SerialName("server_id")
     val serverId: String,
     @SerialName("aliases")
-    val aliases: List<String>? = null,
+    val aliases: Set<String>? = null,
     @SerialName("canonical_alias")
     val canonicalAlias: String? = null,
     val name: String? = null,
