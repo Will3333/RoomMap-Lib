@@ -40,5 +40,5 @@ data class PublicAPIMatrixRoom (
     @SerialName("languages")
     val languages: List<Language>? = null,
     @SerialName("tags")
-    val tags: Set<PublicAPIMatrixRoomTag>? = null
+    val tags: Set<String>? = null
 )
