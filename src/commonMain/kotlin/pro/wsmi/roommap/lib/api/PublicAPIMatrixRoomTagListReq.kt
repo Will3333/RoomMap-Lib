@@ -10,16 +10,16 @@
 
 package pro.wsmi.roommap.lib.api
 
-import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@ExperimentalSerializationApi
-@Serializable
 @Suppress("unused")
-data class PublicAPIMatrixServerReqResponse (
-        @SerialName("server_id")
-        val serverId: String,
-        @SerialName("server")
-        val server: PublicAPIMatrixServer
-) : APIResponse
+class PublicAPIMatrixRoomTagListReq : PublicAPIRequest
+{
+    companion object {
+        const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/tags"
+        const val HTTP_METHOD = "GET"
+    }
+
+    override val reqPath: String
+        get() = REQ_PATH
+    override val httpMethod: String
+        get() = HTTP_METHOD
+}

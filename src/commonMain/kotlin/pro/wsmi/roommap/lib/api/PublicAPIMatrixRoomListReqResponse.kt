@@ -16,6 +16,7 @@ import kotlinx.serialization.Serializable
 
 @ExperimentalSerializationApi
 @Serializable
+@Suppress("unused")
 data class PublicAPIMatrixRoomListReqResponse (
         @SerialName("rooms")
     val rooms: List<PublicAPIMatrixRoom>,

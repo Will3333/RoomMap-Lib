@@ -16,6 +16,7 @@ import kotlinx.serialization.Serializable
 
 @ExperimentalSerializationApi
 @Serializable
+@Suppress("unused")
 data class PublicAPIMatrixServerListReqResponse (
         @SerialName("servers")
         val servers : Map<String, PublicAPIMatrixServer>,

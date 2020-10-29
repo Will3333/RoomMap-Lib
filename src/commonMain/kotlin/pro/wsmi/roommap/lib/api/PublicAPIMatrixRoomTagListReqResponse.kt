@@ -17,9 +17,7 @@ import kotlinx.serialization.Serializable
 @ExperimentalSerializationApi
 @Serializable
 @Suppress("unused")
-data class PublicAPIMatrixServerReqResponse (
-        @SerialName("server_id")
-        val serverId: String,
-        @SerialName("server")
-        val server: PublicAPIMatrixServer
+data class PublicAPIMatrixRoomTagListReqResponse (
+        @SerialName("tags")
+        val tags : Map<String, PublicAPIMatrixRoomTag>,
 ) : APIResponse
