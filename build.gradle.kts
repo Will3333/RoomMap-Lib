@@ -18,7 +18,7 @@ group = "pro.wsmi"
 version = "0.1.1-beta"
 
 val SERIALIZATION_VERSION = "1.0.0"
-val KWSMILIB_VERSION = "0.10.0"
+val KWSMILIB_VERSION = "0.10.1"
 
 repositories {
     mavenCentral()

@@ -10,9 +10,12 @@
 
 package pro.wsmi.roommap.lib.api
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import pro.wsmi.kwsmilib.language.Language
 
+@ExperimentalSerializationApi
 @Serializable
 data class PublicAPIMatrixRoom (
     @SerialName("id")
@@ -33,5 +36,9 @@ data class PublicAPIMatrixRoom (
     @SerialName("guest_can_join")
     val guestCanJoin: Boolean,
     @SerialName("avatar_url")
-    val avatarUrl: String? = null
+    val avatarUrl: String? = null,
+    @SerialName("languages")
+    val languages: List<Language>? = null,
+    @SerialName("tags")
+    val tags: Set<PublicAPIMatrixRoomTag>? = null
 )
