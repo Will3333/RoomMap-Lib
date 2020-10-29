@@ -10,18 +10,13 @@
 
 package pro.wsmi.roommap.lib.api
 
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import pro.wsmi.kwsmilib.net.URL
 
-@ExperimentalSerializationApi
 @Serializable
-data class PublicAPIMatrixServer (
-        @SerialName("name")
-        val name: String,
-        @SerialName("api_url")
-        val apiURL: URL,
-        @SerialName("update_frequency")
-        val updateFreq: Long
+data class PublicAPIMatrixRoomTag (
+    @SerialName("id")
+    val id: String,
+    @SerialName("parent")
+    val parent: PublicAPIMatrixRoomTag? = null
 )
