@@ -16,9 +16,9 @@ import kotlinx.serialization.Serializable
 
 @ExperimentalSerializationApi
 @Serializable
-data class APIServerReqResponse (
+data class PublicAPIMatrixServerReqResponse (
         @SerialName("server_id")
         val serverId: String,
         @SerialName("server")
-        val server: MatrixServer
+        val server: PublicAPIMatrixServer
 ) : APIResponse

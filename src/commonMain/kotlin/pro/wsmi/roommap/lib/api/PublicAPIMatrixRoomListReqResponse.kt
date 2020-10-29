@@ -16,9 +16,9 @@ import kotlinx.serialization.Serializable
 
 @ExperimentalSerializationApi
 @Serializable
-data class APIRoomListReqResponse (
-    @SerialName("rooms")
-    val rooms: List<MatrixRoom>,
-    @SerialName("rooms_total_num")
+data class PublicAPIMatrixRoomListReqResponse (
+        @SerialName("rooms")
+    val rooms: List<PublicAPIMatrixRoom>,
+        @SerialName("rooms_total_num")
     val roomsTotalNum: Int
 ) : APIResponse

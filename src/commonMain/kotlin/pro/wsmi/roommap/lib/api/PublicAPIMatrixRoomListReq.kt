@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 @Suppress("unused")
-data class APIRoomListReq (
+data class PublicAPIMatrixRoomListReq (
         @SerialName("filtering_guest_can_join")
         val filteringGuestCanJoin: MatrixRoomGuestCanJoinFilter = MatrixRoomGuestCanJoinFilter.NO_FILTER,
         @SerialName("filtering_world_readable")

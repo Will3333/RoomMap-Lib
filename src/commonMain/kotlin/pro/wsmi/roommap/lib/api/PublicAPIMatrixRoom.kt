@@ -10,17 +10,28 @@
 
 package pro.wsmi.roommap.lib.api
 
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import pro.wsmi.kwsmilib.net.URL
 
-@ExperimentalSerializationApi
 @Serializable
-data class MatrixServer (
-    val name: String,
-    @SerialName("api_url")
-    val apiURL: URL,
-    @SerialName("update_frequency")
-    val updateFreq: Long = 3600000L
+data class PublicAPIMatrixRoom (
+    @SerialName("id")
+    val roomId: String,
+    @SerialName("server_id")
+    val serverId: String,
+    @SerialName("aliases")
+    val aliases: Set<String>? = null,
+    @SerialName("canonical_alias")
+    val canonicalAlias: String? = null,
+    val name: String? = null,
+    @SerialName("num_joined_members")
+    val numJoinedMembers: Int,
+    @SerialName("topic")
+    val topic: String? = null,
+    @SerialName("world_readable")
+    val worldReadable: Boolean,
+    @SerialName("guest_can_join")
+    val guestCanJoin: Boolean,
+    @SerialName("avatar_url")
+    val avatarUrl: String? = null
 )
