@@ -39,6 +39,6 @@ data class PublicAPIMatrixRoom (
     val avatarUrl: String? = null,
     @SerialName("languages")
     val languages: List<Language>? = null,
-    @SerialName("tags")
-    val tags: Set<String>? = null
+    @SerialName("tag_ids")
+    val tagIds: Set<String>? = null
 )

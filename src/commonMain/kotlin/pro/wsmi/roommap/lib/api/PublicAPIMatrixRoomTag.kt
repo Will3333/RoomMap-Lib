@@ -17,6 +17,6 @@ import kotlinx.serialization.Serializable
 data class PublicAPIMatrixRoomTag (
     @SerialName("id")
     val id: String,
-    @SerialName("parent")
-    val parent: PublicAPIMatrixRoomTag? = null
+    @SerialName("parent_id")
+    val parentId: String? = null
 )
