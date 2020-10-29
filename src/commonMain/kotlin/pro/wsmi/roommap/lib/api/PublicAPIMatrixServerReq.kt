@@ -18,10 +18,10 @@ import kotlinx.serialization.Serializable
 data class PublicAPIMatrixServerReq (
         @SerialName("server_id")
         val serverId: String
-) : APIRequestWithParameters
+) : PublicAPIRequest, APIRequestWithParameters
 {
         companion object {
-                const val REQ_PATH = APIRequest.API_PATH + "/server"
+                const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/server"
                 const val HTTP_METHOD = "POST"
         }
 

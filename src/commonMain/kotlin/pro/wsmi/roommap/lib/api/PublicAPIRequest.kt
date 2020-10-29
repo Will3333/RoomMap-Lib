@@ -10,16 +10,9 @@
 
 package pro.wsmi.roommap.lib.api
 
-@Suppress("unused")
-class PublicAPIMatrixServerListReq : PublicAPIRequest
+interface PublicAPIRequest : APIRequest
 {
     companion object {
-        const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/servers"
-        const val HTTP_METHOD = "GET"
+        const val PUBLIC_API_PATH = APIRequest.API_PATH + "/public"
     }
-
-    override val reqPath: String
-        get() = REQ_PATH
-    override val httpMethod: String
-        get() = HTTP_METHOD
 }

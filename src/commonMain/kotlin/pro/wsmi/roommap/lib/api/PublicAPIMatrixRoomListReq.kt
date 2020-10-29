@@ -32,10 +32,10 @@ data class PublicAPIMatrixRoomListReq (
         val start: Int = 0,
         @SerialName("end")
         val end: Int? = null
-) : APIRequestWithParameters
+) : PublicAPIRequest, APIRequestWithParameters
 {
     companion object {
-        const val REQ_PATH = APIRequest.API_PATH + "/rooms"
+        const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/rooms"
         const val HTTP_METHOD = "POST"
     }
 
