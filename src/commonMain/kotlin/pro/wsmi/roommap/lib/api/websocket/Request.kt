@@ -8,8 +8,13 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
-interface APIMessage
+interface Request : Message
 {
+    val reqId: String
+
+    companion object {
+        const val API_PATH = "/websocket_api"
+    }
 }

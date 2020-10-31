@@ -8,20 +8,19 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import pro.wsmi.kwsmilib.net.URL
+import pro.wsmi.roommap.lib.api.MatrixRoomPublicData
 
 @ExperimentalSerializationApi
 @Serializable
-data class PublicAPIMatrixServer (
-        @SerialName("name")
-        val name: String,
-        @SerialName("api_url")
-        val apiURL: URL,
-        @SerialName("update_frequency")
-        val updateFreq: Long
-)
+@Suppress("unused")
+data class MatrixRoomPublicDataListReqResponse (
+    @SerialName("rooms")
+    val rooms: List<MatrixRoomPublicData>,
+    @SerialName("rooms_total_num")
+    val roomsTotalNum: Int
+) : Response

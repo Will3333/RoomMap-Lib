@@ -8,13 +8,13 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
 @Suppress("unused")
-class PublicAPIMatrixServerListReq : PublicAPIRequest
+class MatrixServerPublicDataListReq : PublicDataRequest
 {
     companion object {
-        const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/servers"
+        const val REQ_PATH = PublicDataRequest.PUBLIC_API_PATH + "/servers"
         const val HTTP_METHOD = "GET"
     }
 

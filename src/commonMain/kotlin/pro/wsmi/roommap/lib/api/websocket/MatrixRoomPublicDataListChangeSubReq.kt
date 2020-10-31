@@ -8,14 +8,15 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
-interface APIRequest : APIMessage
-{
-    companion object {
-        const val API_PATH = "/api"
-    }
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-    val reqPath: String
-    val httpMethod: String
-}
+@Serializable
+@SerialName("matrix_room_public_data_list_change_subscription_request")
+@Suppress("unused")
+data class MatrixRoomPublicDataListChangeSubReq (
+    @SerialName("request_id")
+    override val reqId: String
+) : Request

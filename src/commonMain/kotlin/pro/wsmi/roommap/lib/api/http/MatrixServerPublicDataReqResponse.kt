@@ -8,18 +8,17 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+import pro.wsmi.roommap.lib.api.MatrixServerPublicData
+
+@ExperimentalSerializationApi
+@Serializable
 @Suppress("unused")
-class PublicAPIMatrixRoomTagListReq : PublicAPIRequest
-{
-    companion object {
-        const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/tags"
-        const val HTTP_METHOD = "GET"
-    }
-
-    override val reqPath: String
-        get() = REQ_PATH
-    override val httpMethod: String
-        get() = HTTP_METHOD
-}
+data class MatrixServerPublicDataReqResponse (
+        @SerialName("server")
+        val server: MatrixServerPublicData
+) : Response

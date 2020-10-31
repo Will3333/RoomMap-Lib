@@ -8,13 +8,15 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class PublicAPIMatrixRoomTag (
-    @SerialName("parent_id")
-    val parentId: String? = null
-)
+@SerialName("matrix_server_public_data_list_change_subscription_request")
+@Suppress("unused")
+data class MatrixServerPublicDataListChangeSubReq (
+    @SerialName("request_id")
+    override val reqId: String
+) : Request

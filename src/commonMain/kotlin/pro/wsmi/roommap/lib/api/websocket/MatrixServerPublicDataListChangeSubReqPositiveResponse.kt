@@ -8,18 +8,22 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import pro.wsmi.roommap.lib.api.MatrixServerPublicData
 
 @ExperimentalSerializationApi
 @Serializable
+@SerialName("matrix_server_public_data_list_change_subscription_request_positive_response")
 @Suppress("unused")
-data class PublicAPIMatrixServerReqResponse (
-        @SerialName("server_id")
-        val serverId: String,
-        @SerialName("server")
-        val server: PublicAPIMatrixServer
-) : APIResponse
+data class MatrixServerPublicDataListChangeSubReqPositiveResponse (
+    @SerialName("request_id")
+    override val reqId: String,
+    @SerialName("subscription_id")
+    override val subId: String,
+    @SerialName("servers")
+    val servers : List<MatrixServerPublicData>
+) : SubPositiveResponse

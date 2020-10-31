@@ -8,6 +8,11 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
-interface APIRequestWithParameters
+interface PublicDataRequest : Request
+{
+    companion object {
+        const val PUBLIC_API_PATH = Request.API_PATH + "/public"
+    }
+}

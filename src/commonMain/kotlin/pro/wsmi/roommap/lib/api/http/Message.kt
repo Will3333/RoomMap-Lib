@@ -8,16 +8,6 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
-import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@ExperimentalSerializationApi
-@Serializable
-@Suppress("unused")
-data class PublicAPIMatrixServerListReqResponse (
-        @SerialName("servers")
-        val servers : Map<String, PublicAPIMatrixServer>,
-) : APIResponse
+interface Message

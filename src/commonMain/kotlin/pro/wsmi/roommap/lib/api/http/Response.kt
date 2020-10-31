@@ -8,9 +8,6 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
-interface APIResponse : APIMessage
-{
-
-}
+interface Response : Message

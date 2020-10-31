@@ -8,18 +8,8 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
-import kotlinx.serialization.ExperimentalSerializationApi
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@ExperimentalSerializationApi
-@Serializable
-@Suppress("unused")
-data class PublicAPIMatrixRoomListReqResponse (
-        @SerialName("rooms")
-    val rooms: List<PublicAPIMatrixRoom>,
-        @SerialName("rooms_total_num")
-    val roomsTotalNum: Int
-) : APIResponse
+interface Response : Message {
+    val reqId: String
+}

@@ -17,7 +17,7 @@ import pro.wsmi.kwsmilib.language.Language
 
 @ExperimentalSerializationApi
 @Serializable
-data class PublicAPIMatrixRoom (
+data class MatrixRoomPublicData (
     @SerialName("id")
     val roomId: String,
     @SerialName("server_id")

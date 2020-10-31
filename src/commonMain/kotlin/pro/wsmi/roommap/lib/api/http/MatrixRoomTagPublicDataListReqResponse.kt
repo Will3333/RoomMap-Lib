@@ -8,16 +8,17 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.http
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import pro.wsmi.roommap.lib.api.MatrixRoomTagPublicData
 
 @ExperimentalSerializationApi
 @Serializable
 @Suppress("unused")
-data class PublicAPIMatrixRoomTagListReqResponse (
+data class MatrixRoomTagPublicDataListReqResponse (
         @SerialName("tags")
-        val tags : Map<String, PublicAPIMatrixRoomTag>,
-) : APIResponse
+        val tags : Set<MatrixRoomTagPublicData>
+) : Response

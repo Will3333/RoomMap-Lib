@@ -8,25 +8,17 @@
  *  See the License for the specific language governing permissions and limitations under the License.
  */
 
-package pro.wsmi.roommap.lib.api
+package pro.wsmi.roommap.lib.api.websocket
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
+@SerialName("unsubscribing_request_positive_response")
 @Suppress("unused")
-data class PublicAPIMatrixServerReq (
-        @SerialName("server_id")
-        val serverId: String
-) : PublicAPIRequest, APIRequestWithParameters
-{
-        companion object {
-                const val REQ_PATH = PublicAPIRequest.PUBLIC_API_PATH + "/server"
-                const val HTTP_METHOD = "POST"
-        }
-
-        override val reqPath: String
-                get() = REQ_PATH
-        override val httpMethod: String
-                get() = HTTP_METHOD
-}
+data class UnsubReqPositiveResponse(
+    @SerialName("request_id")
+    override val reqId: String,
+    @SerialName("subscription_id")
+    val subId: String,
+) : Response
