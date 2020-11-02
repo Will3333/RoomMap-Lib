@@ -10,4 +10,33 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.modules.SerializersModule
+import kotlinx.serialization.modules.polymorphic
+import kotlinx.serialization.modules.subclass
+import pro.wsmi.roommap.lib.api.websocket.Notification.Companion.registerSubclasses
+import pro.wsmi.roommap.lib.api.websocket.Request.Companion.registerSubclasses
+import pro.wsmi.roommap.lib.api.websocket.Response.Companion.registerSubclasses
+
 interface Message
+{
+    companion object
+    {
+        @ExperimentalSerializationApi
+        @Suppress("unused")
+        val serializerModule = SerializersModule {
+            polymorphic(Request::class) {
+                registerSubclasses()
+            }
+            polymorphic(Response::class) {
+                registerSubclasses()
+            }
+            polymorphic(Notification::class) {
+                registerSubclasses()
+            }
+            polymorphic(Message::class) {
+                subclass(GlobalError::class)
+            }
+        }
+    }
+}

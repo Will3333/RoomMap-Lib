@@ -18,7 +18,6 @@ import pro.wsmi.roommap.lib.api.MatrixRoomPublicData
 @ExperimentalSerializationApi
 @Serializable
 @SerialName("matrix_room_public_data_new_list_notification")
-@Suppress("unused")
 data class MatrixRoomPublicDataNewListNotif (
     @SerialName("subscription_id")
     override val subId: String,

@@ -18,7 +18,6 @@ import pro.wsmi.roommap.lib.api.MatrixServerPublicData
 @ExperimentalSerializationApi
 @Serializable
 @SerialName("matrix_server_public_data_list_change_subscription_request_positive_response")
-@Suppress("unused")
 data class MatrixServerPublicDataListChangeSubReqPositiveResponse (
     @SerialName("request_id")
     override val reqId: String,

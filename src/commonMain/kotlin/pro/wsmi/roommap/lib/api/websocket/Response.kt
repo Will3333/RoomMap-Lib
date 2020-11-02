@@ -10,6 +10,25 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
-interface Response : Message {
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.modules.PolymorphicModuleBuilder
+import kotlinx.serialization.modules.subclass
+
+interface Response : Message
+{
     val reqId: String
+
+    companion object
+    {
+        @ExperimentalSerializationApi
+        fun PolymorphicModuleBuilder<Response>.registerSubclasses()
+        {
+            subclass(MatrixRoomPublicDataListChangeSubReqPositiveResponse::class)
+            subclass(MatrixRoomTagPublicDataListChangeSubReqPositiveResponse::class)
+            subclass(MatrixServerPublicDataListChangeSubReqPositiveResponse::class)
+            subclass(SubReqNegativeResponse::class)
+            subclass(UnsubReqNegativeResponse::class)
+            subclass(UnsubReqPositiveResponse::class)
+        }
+    }
 }

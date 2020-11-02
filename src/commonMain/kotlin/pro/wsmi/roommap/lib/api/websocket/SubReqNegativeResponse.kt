@@ -17,7 +17,6 @@ import kotlinx.serialization.Serializable
 @ExperimentalSerializationApi
 @Serializable
 @SerialName("subscription_request_negative_response")
-@Suppress("unused")
 data class SubReqNegativeResponse (
     @SerialName("request_id")
     override val reqId: String,

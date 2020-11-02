@@ -10,4 +10,18 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.modules.PolymorphicModuleBuilder
+import kotlinx.serialization.modules.subclass
+
 interface Notification : Message
+{
+    companion object
+    {
+        @ExperimentalSerializationApi
+        fun PolymorphicModuleBuilder<Notification>.registerSubclasses() {
+            subclass(MatrixRoomPublicDataNewListNotif::class)
+            subclass(NewMatrixServerPublicDataNotif::class)
+        }
+    }
+}

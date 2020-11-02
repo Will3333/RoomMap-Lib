@@ -10,11 +10,24 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
+import kotlinx.serialization.modules.PolymorphicModuleBuilder
+import kotlinx.serialization.modules.subclass
+
 interface Request : Message
 {
     val reqId: String
 
-    companion object {
+    companion object
+    {
+        @Suppress("unused")
         const val API_PATH = "/websocket_api"
+
+        fun PolymorphicModuleBuilder<Request>.registerSubclasses()
+        {
+            subclass(MatrixRoomPublicDataListChangeSubReq::class)
+            subclass(MatrixRoomTagPublicDataListChangeSubReq::class)
+            subclass(MatrixServerPublicDataListChangeSubReq::class)
+            subclass(UnsubReq::class)
+        }
     }
 }

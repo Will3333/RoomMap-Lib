@@ -15,7 +15,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 @SerialName("unsubscribing_request")
-@Suppress("unused")
 data class UnsubReq (
     @SerialName("request_id")
     override val reqId: String,

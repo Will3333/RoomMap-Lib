@@ -15,7 +15,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 @SerialName("matrix_room_public_data_list_change_subscription_request")
-@Suppress("unused")
 data class MatrixRoomPublicDataListChangeSubReq (
     @SerialName("request_id")
     override val reqId: String

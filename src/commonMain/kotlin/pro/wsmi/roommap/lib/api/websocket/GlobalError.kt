@@ -14,8 +14,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-@SerialName("new_matrix_server_public_data_notification")
-data class NewMatrixServerPublicDataNotif (
-    @SerialName("subscription_id")
-    override val subId: String
-) : SubNotification
+@SerialName("global_error")
+data class GlobalError (
+    @SerialName("code")
+    val code: Short
+) : Message
