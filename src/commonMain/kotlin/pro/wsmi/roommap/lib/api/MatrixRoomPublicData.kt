@@ -21,7 +21,7 @@ data class MatrixRoomPublicData (
     @SerialName("id")
     val roomId: String,
     @SerialName("server_id")
-    val serverId: String,
+    val serverId: Int,
     @SerialName("aliases")
     val aliases: Set<String>? = null,
     @SerialName("canonical_alias")

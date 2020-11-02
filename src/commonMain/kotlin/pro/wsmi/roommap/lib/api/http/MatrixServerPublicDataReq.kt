@@ -17,7 +17,7 @@ import kotlinx.serialization.Serializable
 @Suppress("unused")
 data class MatrixServerPublicDataReq (
         @SerialName("id")
-        val id: String
+        val id: Int
 ) : PublicDataRequest, RequestWithParameters
 {
         companion object {
