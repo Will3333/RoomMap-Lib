@@ -19,9 +19,6 @@ interface Request : Message
 
     companion object
     {
-        @Suppress("unused")
-        const val API_PATH = "/websocket_api"
-
         fun PolymorphicModuleBuilder<Request>.registerSubclasses()
         {
             subclass(MatrixRoomPublicDataListChangeSubReq::class)

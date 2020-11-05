@@ -22,6 +22,9 @@ interface Message
 {
     companion object
     {
+        @Suppress("unused")
+        const val API_PATH = "/websocket_api"
+
         @ExperimentalSerializationApi
         @Suppress("unused")
         val serializerModule = SerializersModule {
