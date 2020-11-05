@@ -25,4 +25,4 @@ data class MatrixServerPublicDataListChangeSubReqPositiveResponse (
     override val subId: String,
     @SerialName("servers")
     val servers : List<MatrixServerPublicData>
-) : SubPositiveResponse
+) : SubReqPositiveResponse

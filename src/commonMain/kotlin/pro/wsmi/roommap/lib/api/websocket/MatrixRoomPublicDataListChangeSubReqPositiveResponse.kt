@@ -27,4 +27,4 @@ data class MatrixRoomPublicDataListChangeSubReqPositiveResponse (
     val rooms: List<MatrixRoomPublicData>,
     @SerialName("rooms_total_num")
     val roomsTotalNum: Int
-) : SubPositiveResponse
+) : SubReqPositiveResponse

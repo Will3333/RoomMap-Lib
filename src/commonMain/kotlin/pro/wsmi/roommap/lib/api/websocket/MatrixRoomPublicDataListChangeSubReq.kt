@@ -18,4 +18,4 @@ import kotlinx.serialization.Serializable
 data class MatrixRoomPublicDataListChangeSubReq (
     @SerialName("request_id")
     override val reqId: String
-) : Request
+) : SubRequest

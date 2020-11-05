@@ -10,12 +10,6 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@Serializable
-@SerialName("matrix_server_public_data_list_change_subscription_request")
-data class MatrixServerPublicDataListChangeSubReq (
-    @SerialName("request_id")
-    override val reqId: String
-) : SubRequest
+interface SubReqPositiveResponse : Response {
+    val subId: String
+}

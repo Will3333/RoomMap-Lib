@@ -10,6 +10,4 @@
 
 package pro.wsmi.roommap.lib.api.websocket
 
-interface SubPositiveResponse : Response {
-    val subId: String
-}
+interface SubRequest : Request

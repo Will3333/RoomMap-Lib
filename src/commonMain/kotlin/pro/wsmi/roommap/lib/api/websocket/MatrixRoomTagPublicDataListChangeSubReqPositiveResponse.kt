@@ -23,4 +23,4 @@ data class MatrixRoomTagPublicDataListChangeSubReqPositiveResponse (
     override val subId: String,
     @SerialName("tags")
     val tags : Set<MatrixRoomTagPublicData>
-) : SubPositiveResponse
+) : SubReqPositiveResponse
